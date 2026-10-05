@@ -2,143 +2,833 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b12">
-  <meta name="description" content="Lead BR — encontre empresas que precisam de um site melhor.">
-  <title>Lead BR — Prospecção inteligente</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Lead BR — encontre empresas e oportunidades comerciais."
+  >
+
+  <title>Lead BR — Inteligência para prospecção</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="toast" class="toast"></div>
 
-  <div id="onboarding" class="onboarding">
-    <div class="onboarding-glow"></div>
+<body>
+
+  <!-- =========================
+       ONBOARDING
+  ========================== -->
+
+  <section id="onboarding" class="onboarding">
+
     <div class="onboarding-card">
-      <div class="brand brand-center"><span class="brand-mark">LB</span><span>Lead <b>BR</b></span></div>
-      <span class="eyebrow">PROSPECÇÃO INTELIGENTE</span>
-      <h1>Como podemos te chamar?</h1>
-      <p>Personalize seu painel e encontre empresas com potencial para receber um site melhor.</p>
+
+      <img
+        src="1000067492-removebg-preview.png"
+        alt="Lead BR"
+        class="onboarding-logo"
+      >
+
+      <div class="eyebrow">
+        LEAD BR
+      </div>
+
+      <h1>
+        Vamos começar.
+      </h1>
+
+      <p>
+        Como podemos te chamar?
+      </p>
+
       <form id="nameForm">
-        <input id="nameInput" type="text" maxlength="40" placeholder="Digite seu nome..." autocomplete="name" required>
-        <button class="primary-btn" type="submit">Entrar no Lead BR <span>→</span></button>
+
+        <input
+          id="nameInput"
+          type="text"
+          placeholder="Digite seu nome..."
+          autocomplete="name"
+          maxlength="40"
+          required
+        >
+
+        <button
+          type="submit"
+          class="primary-btn large-btn"
+        >
+          Entrar no Lead BR →
+        </button>
+
       </form>
-      <small>Seu nome fica salvo somente neste navegador.</small>
+
+      <small>
+        Seus dados ficam armazenados neste navegador.
+      </small>
+
     </div>
-  </div>
+
+  </section>
+
+
+  <!-- =========================
+       APLICAÇÃO
+  ========================== -->
 
   <div id="app" class="app hidden">
+
+    <!-- SIDEBAR -->
+
     <aside class="sidebar">
-      <div class="brand"><span class="brand-mark">LB</span><span>Lead <b>BR</b></span></div>
-      <nav>
-        <button class="nav-item active" data-page="dashboard"><span>⌂</span> Visão geral</button>
-        <button class="nav-item" data-page="search"><span>⌕</span> Buscar leads</button>
-        <button class="nav-item" data-page="saved"><span>☆</span> Leads salvos</button>
-        <button class="nav-item" data-page="settings"><span>⚙</span> Configurações</button>
-      </nav>
-      <div class="sidebar-bottom">
-        <div class="profile-mini"><div class="avatar" id="avatar">JP</div><div><strong id="sideName">João Pedro</strong><small>Prospecção</small></div></div>
-        <button id="logoutBtn" class="ghost-btn">Sair</button>
+
+      <div class="brand">
+
+        <img
+          src="1000067492-removebg-preview.png"
+          alt="Lead BR"
+          class="brand-logo"
+        >
+
+        <div>
+          <strong>Lead BR</strong>
+          <span>Prospecção inteligente</span>
+        </div>
+
       </div>
+
+
+      <nav class="navigation">
+
+        <button
+          class="nav-item active"
+          data-page="dashboard"
+        >
+          <span>⌂</span>
+          Início
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="search"
+        >
+          <span>⌕</span>
+          Buscar Leads
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="saved"
+        >
+          <span>☆</span>
+          Leads Salvos
+        </button>
+
+        <button
+          class="nav-item"
+          data-page="settings"
+        >
+          <span>⚙</span>
+          Configurações
+        </button>
+
+      </nav>
+
+
+      <div class="sidebar-bottom">
+
+        <div class="user-box">
+
+          <div id="avatar" class="avatar">
+            LB
+          </div>
+
+          <div>
+            <strong id="sideName">
+              Visitante
+            </strong>
+
+            <span>
+              Lead BR
+            </span>
+          </div>
+
+        </div>
+
+        <button
+          id="logoutBtn"
+          class="logout-btn"
+        >
+          Sair
+        </button>
+
+      </div>
+
     </aside>
 
+
+    <!-- CONTEÚDO -->
+
     <main class="main">
+
+      <!-- HEADER -->
+
       <header class="topbar">
-        <button id="mobileMenu" class="icon-btn">☰</button>
-        <div class="mobile-brand">Lead <b>BR</b></div>
-        <div class="topbar-actions">
-          <button id="topSearch" class="search-shortcut">⌕ <span>Buscar leads</span><kbd>⌘ K</kbd></button>
-          <button id="themeBtn" class="icon-btn" title="Alternar aparência">☾</button>
+
+        <button
+          id="mobileMenu"
+          class="mobile-menu"
+        >
+          ☰
+        </button>
+
+        <div>
+
+          <span class="topbar-label">
+            PAINEL
+          </span>
+
+          <h2 id="greeting">
+            Bom dia.
+          </h2>
+
         </div>
+
+        <div class="top-actions">
+
+          <button
+            id="themeBtn"
+            class="icon-btn"
+            title="Alterar tema"
+          >
+            ◐
+          </button>
+
+          <button
+            id="topSearch"
+            class="primary-btn"
+          >
+            + Nova busca
+          </button>
+
+        </div>
+
       </header>
 
-      <section id="page-dashboard" class="page active-page">
+
+      <!-- =========================
+           DASHBOARD
+      ========================== -->
+
+      <section
+        id="page-dashboard"
+        class="page active-page"
+      >
+
         <div class="hero">
+
           <div>
-            <span class="eyebrow">SEU PAINEL</span>
-            <h2 id="greeting">Boa tarde, João Pedro.</h2>
-            <p>Encontre empresas que precisam de um site melhor e transforme oportunidades em clientes.</p>
+
+            <span class="eyebrow">
+              INTELIGÊNCIA COMERCIAL
+            </span>
+
+            <h1>
+              Encontre empresas que
+              <span>precisam de você.</span>
+            </h1>
+
+            <p>
+              Pesquise empresas por cidade e nicho,
+              descubra oportunidades e encontre
+              potenciais clientes para sua prospecção.
+            </p>
+
           </div>
-          <button class="primary-btn" data-page-target="search">+ Encontrar leads</button>
+
+          <div class="hero-logo-wrap">
+
+            <img
+              src="1000067492-removebg-preview.png"
+              alt="Lead BR"
+              class="hero-logo"
+            >
+
+          </div>
+
         </div>
+
+
+        <!-- BUSCA RÁPIDA -->
+
+        <div class="quick-search card">
+
+          <div class="section-heading">
+
+            <div>
+
+              <span class="eyebrow">
+                BUSCA RÁPIDA
+              </span>
+
+              <h3>
+                O que você está procurando?
+              </h3>
+
+            </div>
+
+          </div>
+
+
+          <div class="search-grid">
+
+            <div class="field">
+
+              <label>
+                Cidade
+              </label>
+
+              <div class="autocomplete">
+
+                <input
+                  id="quickCity"
+                  type="text"
+                  placeholder="Digite uma cidade..."
+                  autocomplete="off"
+                >
+
+                <div
+                  id="quickCitySuggestions"
+                  class="suggestions"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Nicho
+              </label>
+
+              <div class="autocomplete">
+
+                <input
+                  id="quickNiche"
+                  type="text"
+                  placeholder="Ex.: clínicas"
+                  autocomplete="off"
+                >
+
+                <div
+                  id="quickNicheSuggestions"
+                  class="suggestions"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <button
+              id="quickSearchBtn"
+              class="primary-btn search-button"
+            >
+              Buscar →
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ESTATÍSTICAS -->
 
         <div class="stats-grid">
-          <div class="stat-card"><span class="stat-icon">◎</span><div><small>Leads encontrados</small><strong id="statTotal">0</strong><em>neste navegador</em></div></div>
-          <div class="stat-card hot"><span class="stat-icon">🔥</span><div><small>Leads quentes</small><strong id="statHot">0</strong><em>alta oportunidade</em></div></div>
-          <div class="stat-card"><span class="stat-icon">◉</span><div><small>Sem site</small><strong id="statNoSite">0</strong><em>potenciais clientes</em></div></div>
-          <div class="stat-card"><span class="stat-icon">★</span><div><small>Salvos</small><strong id="statSaved">0</strong><em>para abordar</em></div></div>
+
+          <div class="stat-card">
+
+            <span>
+              Leads encontrados
+            </span>
+
+            <strong id="statTotal">
+              0
+            </strong>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <span>
+              Leads quentes
+            </span>
+
+            <strong id="statHot">
+              0
+            </strong>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <span>
+              Sem site
+            </span>
+
+            <strong id="statNoSite">
+              0
+            </strong>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <span>
+              Salvos
+            </span>
+
+            <strong id="statSaved">
+              0
+            </strong>
+
+          </div>
+
         </div>
 
-        <div class="section-head"><div><h3>Comece sua prospecção</h3><p>Escolha uma cidade e um nicho para encontrar oportunidades.</p></div></div>
-        <div class="quick-search">
-          <div class="field"><label>Localização</label><input id="quickCity" placeholder="Ex.: Votuporanga, SP"></div>
-          <div class="field"><label>Nicho</label><input id="quickNiche" placeholder="Ex.: clínicas"></div>
-          <button id="quickSearchBtn" class="primary-btn">Buscar <span>→</span></button>
+
+        <div class="info-card">
+
+          <div>
+            <span class="eyebrow">
+              COMO FUNCIONA
+            </span>
+
+            <h3>
+              Pesquisa → análise → prospecção
+            </h3>
+
+            <p>
+              O Lead BR pesquisa empresas reais,
+              organiza os resultados e identifica
+              oportunidades para você abordar.
+            </p>
+          </div>
+
+          <button
+            class="primary-btn"
+            data-page-target="search"
+          >
+            Começar busca
+          </button>
+
         </div>
 
-        <div class="section-head"><div><h3>Como o Lead BR pontua</h3><p>Priorize quem tem maior potencial para comprar seu serviço.</p></div></div>
-        <div class="score-grid">
-          <div class="score-card"><b>🔥 80–100</b><strong>Lead quente</strong><span>Sem site ou site com problemas importantes.</span></div>
-          <div class="score-card"><b>🟡 50–79</b><strong>Lead médio</strong><span>Existe oportunidade, mas exige análise.</span></div>
-          <div class="score-card"><b>⚪ 0–49</b><strong>Lead fraco</strong><span>Site mais completo ou pouca oportunidade.</span></div>
-        </div>
       </section>
 
-      <section id="page-search" class="page">
-        <div class="page-title"><div><span class="eyebrow">PROSPECÇÃO</span><h2>Buscar leads</h2><p>Encontre empresas por cidade, estado ou em todo o Brasil.</p></div></div>
-        <div class="search-panel">
-          <div class="field"><label>Localização</label><select id="locationType"><option value="city">Cidade específica</option><option value="state">Estado</option><option value="brasil">Todo Brasil</option></select></div>
-          <div class="field" id="locationField"><label>Cidade / UF</label><input id="cityInput" placeholder="Ex.: Sorocaba, SP"></div>
-          <div class="field"><label>Nicho</label><input id="nicheInput" placeholder="Ex.: clínicas, academias, restaurantes"></div>
-          <div class="field"><label>Quantidade</label><select id="amountInput"><option>10</option><option>25</option><option>50</option><option>100</option></select></div>
-          <button id="searchBtn" class="primary-btn wide">🔎 Buscar leads</button>
+
+      <!-- =========================
+           BUSCA
+      ========================== -->
+
+      <section
+        id="page-search"
+        class="page"
+      >
+
+        <div class="page-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              PROSPECÇÃO
+            </span>
+
+            <h1>
+              Buscar Leads
+            </h1>
+
+            <p>
+              Encontre empresas por cidade,
+              estado ou em todo o Brasil.
+            </p>
+
+          </div>
+
         </div>
 
-        <div id="searchStatus" class="search-status hidden"></div>
-        <div class="results-head hidden" id="resultsHead"><div><h3>Resultados</h3><span id="resultCount"></span></div><button id="clearResults" class="ghost-btn">Limpar</button></div>
-        <div id="results" class="results-grid"></div>
+
+        <div class="search-panel card">
+
+          <div class="search-grid search-grid-main">
+
+            <div class="field">
+
+              <label>
+                Localização
+              </label>
+
+              <select id="locationType">
+
+                <option value="city">
+                  Cidade específica
+                </option>
+
+                <option value="brasil">
+                  🇧🇷 Todo Brasil
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div
+              id="locationField"
+              class="field"
+            >
+
+              <label>
+                Cidade
+              </label>
+
+              <div class="autocomplete">
+
+                <input
+                  id="cityInput"
+                  type="text"
+                  placeholder="Digite a cidade..."
+                  autocomplete="off"
+                >
+
+                <div
+                  id="citySuggestions"
+                  class="suggestions"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Nicho
+              </label>
+
+              <div class="autocomplete">
+
+                <input
+                  id="nicheInput"
+                  type="text"
+                  placeholder="Ex.: clínicas"
+                  autocomplete="off"
+                >
+
+                <div
+                  id="nicheSuggestions"
+                  class="suggestions"
+                ></div>
+
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label>
+                Quantidade
+              </label>
+
+              <select id="amountInput">
+
+                <option value="10">
+                  10 leads
+                </option>
+
+                <option value="20">
+                  20 leads
+                </option>
+
+                <option value="30">
+                  30 leads
+                </option>
+
+                <option value="50">
+                  50 leads
+                </option>
+
+                <option value="100">
+                  100 leads
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="search-submit-row">
+
+            <button
+              id="searchBtn"
+              class="primary-btn large-btn"
+            >
+              🔎 Buscar Leads
+            </button>
+
+          </div>
+
+
+          <div
+            id="searchStatus"
+            class="search-status hidden"
+          ></div>
+
+        </div>
+
+
+        <div
+          id="resultsHead"
+          class="results-head hidden"
+        >
+
+          <div>
+
+            <span class="eyebrow">
+              RESULTADOS
+            </span>
+
+            <h3 id="resultCount">
+              0 oportunidades
+            </h3>
+
+          </div>
+
+          <button
+            id="clearResults"
+            class="secondary-btn"
+          >
+            Limpar
+          </button>
+
+        </div>
+
+
+        <div
+          id="results"
+          class="results-grid"
+        ></div>
+
       </section>
 
-      <section id="page-saved" class="page">
-        <div class="page-title"><div><span class="eyebrow">PIPELINE</span><h2>Leads salvos</h2><p>Suas melhores oportunidades ficam aqui.</p></div></div>
-        <div id="savedResults" class="results-grid"></div>
+
+      <!-- =========================
+           SALVOS
+      ========================== -->
+
+      <section
+        id="page-saved"
+        class="page"
+      >
+
+        <div class="page-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              MINHA LISTA
+            </span>
+
+            <h1>
+              Leads Salvos
+            </h1>
+
+            <p>
+              Empresas que você marcou para prospectar.
+            </p>
+
+          </div>
+
+          <button
+            id="clearSavedBtn"
+            class="secondary-btn"
+          >
+            Limpar salvos
+          </button>
+
+        </div>
+
+
+        <div
+          id="savedResults"
+          class="results-grid"
+        ></div>
+
       </section>
 
-      <section id="page-settings" class="page">
-        <div class="page-title"><div><span class="eyebrow">SISTEMA</span><h2>Configurações</h2><p>Personalize o Lead BR e conecte suas APIs.</p></div></div>
+
+      <!-- =========================
+           CONFIGURAÇÕES
+      ========================== -->
+
+      <section
+        id="page-settings"
+        class="page"
+      >
+
+        <div class="page-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              SISTEMA
+            </span>
+
+            <h1>
+              Configurações
+            </h1>
+
+            <p>
+              Personalize sua experiência no Lead BR.
+            </p>
+
+          </div>
+
+        </div>
+
+
         <div class="settings-grid">
-          <div class="settings-card">
-            <div class="settings-heading"><span>👤</span><div><h3>Seu perfil</h3><p>Nome usado nas saudações.</p></div></div>
-            <label>Nome</label><input id="settingsName" maxlength="40">
-            <button id="saveNameBtn" class="secondary-btn">Salvar nome</button>
+
+          <div class="card settings-card">
+
+            <span class="eyebrow">
+              PERFIL
+            </span>
+
+            <h3>
+              Seu nome
+            </h3>
+
+            <input
+              id="settingsName"
+              type="text"
+              placeholder="Seu nome"
+            >
+
+            <button
+              id="saveNameBtn"
+              class="primary-btn"
+            >
+              Salvar nome
+            </button>
+
           </div>
-          <div class="settings-card">
-            <div class="settings-heading"><span>🔑</span><div><h3>Chaves de API</h3><p>Campos preparados para sua integração.</p></div></div>
-            <label>API de busca de empresas</label><div class="password-wrap"><input id="businessApi" type="password" placeholder="Cole sua API Key"><button class="reveal-btn" data-target="businessApi">◉</button></div>
-            <label>API de análise de sites</label><div class="password-wrap"><input id="siteApi" type="password" placeholder="Cole sua API Key"><button class="reveal-btn" data-target="siteApi">◉</button></div>
-            <button id="saveApiBtn" class="secondary-btn">Salvar configurações</button>
-            <div class="warning">Para produção, não coloque chaves secretas diretamente no JavaScript. Use um backend/variáveis de ambiente.</div>
+
+
+          <div class="card settings-card">
+
+            <span class="eyebrow">
+              APIs
+            </span>
+
+            <h3>
+              Integrações
+            </h3>
+
+            <p>
+              A chave principal da SerpApi fica
+              protegida na Vercel.
+            </p>
+
+            <div class="api-status">
+              <span class="status-dot"></span>
+              SerpApi protegida no servidor
+            </div>
+
           </div>
-          <div class="settings-card">
-            <div class="settings-heading"><span>🗑</span><div><h3>Dados locais</h3><p>Controle os dados armazenados neste navegador.</p></div></div>
-            <button id="clearSavedBtn" class="danger-btn">Apagar leads salvos</button>
-            <button id="resetBtn" class="ghost-btn full">Resetar Lead BR</button>
+
+
+          <div class="card settings-card">
+
+            <span class="eyebrow">
+              DADOS
+            </span>
+
+            <h3>
+              Dados locais
+            </h3>
+
+            <p>
+              Seus leads salvos ficam armazenados
+              neste navegador.
+            </p>
+
+            <button
+              id="resetBtn"
+              class="danger-btn"
+            >
+              Resetar Lead BR
+            </button>
+
           </div>
+
         </div>
+
       </section>
+
     </main>
+
   </div>
 
-  <div id="leadModal" class="modal hidden">
-    <div class="modal-backdrop" data-close-modal></div>
+
+  <!-- =========================
+       MODAL DE ANÁLISE
+  ========================== -->
+
+  <div
+    id="leadModal"
+    class="modal hidden"
+  >
+
+    <div class="modal-overlay" data-close-modal></div>
+
     <div class="modal-card">
-      <button class="modal-close" data-close-modal>×</button>
+
+      <button
+        class="modal-close"
+        data-close-modal
+      >
+        ×
+      </button>
+
       <div id="modalContent"></div>
+
     </div>
+
   </div>
+
+
+  <!-- TOAST -->
+
+  <div
+    id="toast"
+    class="toast"
+  ></div>
+
 
   <script src="script.js"></script>
+
 </body>
-</html>
+                </html>
